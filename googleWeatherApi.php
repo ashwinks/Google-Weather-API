@@ -4,21 +4,7 @@
 	 * Grabs weather data from Google.com's weather API and return a nicely formatted array
 	 *
 	 * @author Ashwin Surajbali
-	 * @package Redink Design
-	 * @version 1.0
-	 *
-	 * @example
-	 * $w = new googleWeather();
-	 * $w->enable_cache = 1;
-	 * $w->cache_path = '/var/www/mysite.com/cache';
-	 * $ar_data = $w->get_weather_data(10027);
-	 * print_r($ar_data);
-	 * echo $ar_data['forecast'][0]['day_of_week'];
-	 *
-	 * Requires PHP 5 or greater
-	 *
 	 */
-
 	class googleWeather{
 
 		/**
