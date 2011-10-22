@@ -122,7 +122,7 @@
 			}
 
 			if ($this->enable_cache && !empty($this->cache_path)){
-				$this->write_to_cache();
+				$this->write_to_cache($return_array);
 			}
 
 			return $return_array;
@@ -144,14 +144,14 @@
 
 		}
 
-		private function write_to_cache(){
+		private function write_to_cache($data){
 
 			if (!file_exists($this->cache_path)){
 				// attempt to make the dir
 				mkdir($this->cache_path, 0777);
 			}
 
-			if (!file_put_contents($this->cache_file, serialize($return_array))){
+			if (!file_put_contents($this->cache_file, serialize($data))){
 				echo "<br />Could not save data to cache. Please make sure your cache directory exists and is writable.<br />";
 			}
 		}
