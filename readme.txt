@@ -1,3 +1,5 @@
+It seems Google has discontinued their Weather API - sad day.
+
 $w = new googleWeather();
 $w->enable_cache = 1;
 $w->cache_path = '/var/www/mysite.com/cache';
